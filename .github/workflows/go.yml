@@ -33,7 +33,7 @@ jobs:
         run: go mod tidy
 
       - name: Run tests
-        run: go test -v -coverprofile=coverage.out -cover ./infrastructure ./delivery/controller ./usecase ./test
+        run: go test -v -coverprofile=coverage.out -cover ./Infrastructure ./Delivery/controller ./usecase ./test
 
       - name: Display coverage
         run: go tool cover -func=coverage.out
