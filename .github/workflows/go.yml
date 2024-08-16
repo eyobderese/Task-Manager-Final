@@ -3,9 +3,12 @@ name: Go CI
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'repository/**' 
   pull_request:
     branches: [main]
-
+    paths-ignore:
+      - 'repository/**' 
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,7 +20,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: 1.22.5
+          go-version: '1.22'  # Correct version format
 
       - name: Cache Go modules
         uses: actions/cache@v3
