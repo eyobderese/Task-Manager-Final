@@ -4,11 +4,11 @@ on:
   push:
     branches: [main]
     paths-ignore:
-      - 'repository/**' 
+      - 'repositories/**' 
   pull_request:
     branches: [main]
     paths-ignore:
-      - 'repository/**' 
+      - 'repositories/**' 
 jobs:
   build:
     runs-on: ubuntu-latest
